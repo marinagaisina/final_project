@@ -1,82 +1,3 @@
-
-@font-face {
-    font-family: 'montserratlight';
-    src: url('../fonts/montserrat/montserrat-light.eot');
-    src: url('../fonts/montserrat/montserrat-light.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/montserrat/montserrat-light.woff2') format('woff2'),
-         url('../fonts/montserrat/montserrat-light.woff') format('woff'),
-         url('../fonts/montserrat/montserrat-light.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'montserratultralight';
-    src: url('../fonts/montserrat/montserrat-ultralight.eot');
-    src: url('../fonts/montserrat/montserrat-ultralight.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/montserrat/montserrat-ultralight.woff2') format('woff2'),
-         url('../fonts/montserrat/montserrat-ultralight.woff') format('woff'),
-         url('../fonts/montserrat/montserrat-ultralight.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'ralewaybold';
-    src: url('../fonts/raleway/raleway-bold.eot');
-    src: url('../fonts/raleway/raleway-bold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/raleway/raleway-bold.woff2') format('woff2'),
-         url('../fonts/raleway/raleway-bold.woff') format('woff'),
-         url('../fonts/raleway/raleway-bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'ralewayextrabold';
-    src: url('../fonts/raleway/raleway-extrabold.eot');
-    src: url('../fonts/raleway/raleway-extrabold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/raleway/raleway-extrabold.woff2') format('woff2'),
-         url('../fonts/raleway/raleway-extrabold.woff') format('woff'),
-         url('../fonts/raleway/raleway-extrabold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'ralewaymedium';
-    src: url('../fonts/raleway/raleway-medium.eot');
-    src: url('../fonts/raleway/raleway-medium.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/raleway/raleway-medium.woff2') format('woff2'),
-         url('../fonts/raleway/raleway-medium.woff') format('woff'),
-         url('../fonts/raleway/raleway-medium.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'ralewayregular';
-    src: url('../fonts/raleway/raleway-regular.eot');
-    src: url('../fonts/raleway/raleway-regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/raleway/raleway-regular.woff2') format('woff2'),
-         url('../fonts/raleway/raleway-regular.woff') format('woff'),
-         url('../fonts/raleway/raleway-regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'ralewaysemibold';
-    src: url('../fonts/raleway/raleway-semibold.eot');
-    src: url('../fonts/raleway/raleway-semibold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/raleway/raleway-semibold.woff2') format('woff2'),
-         url('../fonts/raleway/raleway-semibold.woff') format('woff'),
-         url('../fonts/raleway/raleway-semibold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
 @width_content: 1170px;
 @padding_sec: 80px;
 
@@ -108,11 +29,12 @@ header {
     width: 185px;
     text-decoration: none;
     svg {
-        fill: #000;
+        fill: #ffffff;
     }
     &_txt {
         font-size: 34px;
-        font-family: 'ralewayregular', 'arial', sans-serif;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
         color: rgb(255, 255, 255);
         line-height: 1.2;
         text-align: right;
@@ -120,8 +42,14 @@ header {
     &:hover .logo_txt {
         color: #c7b299;
     }
+    &:hover svg {
+        fill: #c7b299;
+    }
     &:active .logo_txt {
-        color: #000;
+        color: #000000;
+    }
+    &:active svg {
+        fill: #000000;
     }
 }
 
@@ -134,7 +62,8 @@ header {
         list-style-type: none;
         text-decoration: none;
         color: #ffffff;
-        font-family: 'montserratlight', 'arial', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
         font-size: 14px;
         &:hover {
             color: #c7b299;
@@ -164,7 +93,7 @@ header {
         fill: #ffffff;
         &:hover {
             cursor: pointer;
-            fill:#c7b299;
+            fill:rgb(199, 178, 153);
         }
         &:active {
             fill: #000;
@@ -176,32 +105,48 @@ header {
     &_content {
         min-height: 260px;
     }
-
+    & form {
+        position: relative;
+        &:focus .search {
+            visibility: visible;
+        }
+    }
     .search {
+        position: absolute;
+        top: 30px;
+        left: 13px;
+        visibility: hidden;
         background-color: transparent;
-        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.762,22.681 L17.569,16.586 C19.190,14.825 20.187,12.494 20.187,9.929 C20.186,4.443 15.668,-0.002 10.093,-0.002 C4.519,-0.002 0.001,4.443 0.001,9.929 C0.001,15.416 4.519,19.862 10.093,19.862 C12.502,19.862 14.711,19.028 16.446,17.644 L22.663,23.763 C22.966,24.062 23.458,24.062 23.761,23.763 C24.065,23.464 24.065,22.979 23.762,22.681 ZM10.093,18.334 C5.377,18.334 1.553,14.572 1.553,9.929 C1.553,5.288 5.377,1.525 10.093,1.525 C14.810,1.525 18.633,5.288 18.633,9.929 C18.633,14.572 14.810,18.334 10.093,18.334 Z' fill-rule='nonezero' fill='white'/%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        padding: 10px 5px 10px 33px;
-        background-position: 8px;
+        padding: 5px;
         width: 48px;
         border: none;
         color: #ffffff;
-        font-family: 'montserratlight', Arial, sans-serif;
-        margin: 0 0 0 15px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        &:hover {
+            cursor: pointer;           
+        }
         &:focus {
             width: 170px;
             transition: width 0.5s ease-out;
-            background-position: 5px;
-            border: 1px solid white;
+            border: 1px solid rgb(199, 178, 153);
             outline: none;
-            border-radius: 8px;     
-        }
-        &:hover {
-            cursor: pointer;
-            //   fill:...     java-script?
+            border-radius: 8px; 
         }
     }
-   
+    button[type="submit"] {
+        background-color: transparent;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.762,22.681 L17.569,16.586 C19.190,14.825 20.187,12.494 20.187,9.929 C20.186,4.443 15.668,-0.002 10.093,-0.002 C4.519,-0.002 0.001,4.443 0.001,9.929 C0.001,15.416 4.519,19.862 10.093,19.862 C12.502,19.862 14.711,19.028 16.446,17.644 L22.663,23.763 C22.966,24.062 23.458,24.062 23.761,23.763 C24.065,23.464 24.065,22.979 23.762,22.681 ZM10.093,18.334 C5.377,18.334 1.553,14.572 1.553,9.929 C1.553,5.288 5.377,1.525 10.093,1.525 C14.810,1.525 18.633,5.288 18.633,9.929 C18.633,14.572 14.810,18.334 10.093,18.334 Z' fill-rule='nonezero' fill='white'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        .dimensions(24px, 24px);
+        border: none;
+        margin: 0 0 0 15px;
+        &:hover {
+            outline: none;
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.762,22.681 L17.569,16.586 C19.190,14.825 20.187,12.494 20.187,9.929 C20.186,4.443 15.668,-0.002 10.093,-0.002 C4.519,-0.002 0.001,4.443 0.001,9.929 C0.001,15.416 4.519,19.862 10.093,19.862 C12.502,19.862 14.711,19.028 16.446,17.644 L22.663,23.763 C22.966,24.062 23.458,24.062 23.761,23.763 C24.065,23.464 24.065,22.979 23.762,22.681 ZM10.093,18.334 C5.377,18.334 1.553,14.572 1.553,9.929 C1.553,5.288 5.377,1.525 10.093,1.525 C14.810,1.525 18.633,5.288 18.633,9.929 C18.633,14.572 14.810,18.334 10.093,18.334 Z' fill-rule='nonezero' fill='rgb(199, 178, 153)'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+        }
+    }
 }
 
 .header_content {
@@ -254,17 +199,20 @@ header {
     
     &_wrp {
         &>span:nth-child(2) {
-            font-family: 'ralewaymedium', 'arial', sans-serif;;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
             font-size: 36px;
         }
         &>span:nth-child(3) {
-            font-family: 'ralewayextrabold', 'arial', sans-serif;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800;
             font-size: 52px;
             margin: 14px 0 0 0;
             display: block;
         }
         p {
-            font-family: 'montserratlight', 'arial', sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
             font-size: 16px;
             width: 589px;
             margin: 19px 0 52px 0;
@@ -284,12 +232,13 @@ header {
             justify-content: center;
             margin: auto;
             span {
-                 font-family: 'ralewayextrabold', 'arial', sans-serif;
-                 font-size: 14px;               
-                 text-transform: uppercase;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 800;                 
+                font-size: 14px;               
+                text-transform: uppercase;
             }
             &:hover {
-                background-color: #000000;
+                background-color: #111111;
                 box-shadow: none;
             }
             &:active {
@@ -302,9 +251,150 @@ header {
     }
 }
 
-
-
-.section {
-    max-width: @width_content;
-    margin: auto;        
+.header_pagination {
+    display: flex;
+    width: 98px;
+    justify-content: space-between;
+    margin: 51px auto 42px;
+    &_item {
+        .dimensions(7px, 7px);
+        background-color: #989797;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        &:hover {
+            background-color: transparent;
+            transform: scale(1.4);
+            border: 2px solid #d3c1ad;
+        }
+    }
 }
+
+.departments {
+    max-width: calc(@width_content - 4px);
+    margin: @padding_sec auto @padding_sec;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    &_item {
+        .dimensions(267px, 213px);
+        text-decoration: none;
+        &_icon {
+            margin: 0 auto 29px auto;
+            fill: #555555;;
+        }
+        &_title {
+            display: block;
+            color: #555555;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            font-size: 22px;
+            //font-weight: 400;
+        }
+        &_txt {
+            // width: 266px;
+            // height: 62px;
+            color: #8c8c8c;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-size: 13.5px;
+            // font-weight: 300;
+            line-height: 24px;
+            margin: 19px auto 30px;
+        }
+        &:after {
+            content: "";
+            display: block;
+            .dimensions(70px, 3px);
+            background-color: #f1eee9;
+            margin: auto;
+        }
+        &:hover .departments_item_icon {
+            fill: #c7b299;;
+        }
+        &:hover .departments_item_title {
+            color: #c7b299;
+        }
+        &:hover:after {
+            background-color: #c7b299;;
+        }
+    }        
+}
+
+
+// @font-face {
+//     font-family: 'montserratlight';
+//     src: url('../fonts/montserrat/montserrat-light.eot');
+//     src: url('../fonts/montserrat/montserrat-light.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/montserrat/montserrat-light.woff2') format('woff2'),
+//          url('../fonts/montserrat/montserrat-light.woff') format('woff'),
+//          url('../fonts/montserrat/montserrat-light.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'montserratultralight';
+//     src: url('../fonts/montserrat/montserrat-ultralight.eot');
+//     src: url('../fonts/montserrat/montserrat-ultralight.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/montserrat/montserrat-ultralight.woff2') format('woff2'),
+//          url('../fonts/montserrat/montserrat-ultralight.woff') format('woff'),
+//          url('../fonts/montserrat/montserrat-ultralight.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'ralewaybold';
+//     src: url('../fonts/raleway/raleway-bold.eot');
+//     src: url('../fonts/raleway/raleway-bold.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/raleway/raleway-bold.woff2') format('woff2'),
+//          url('../fonts/raleway/raleway-bold.woff') format('woff'),
+//          url('../fonts/raleway/raleway-bold.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'ralewayextrabold';
+//     src: url('../fonts/raleway/raleway-extrabold.eot');
+//     src: url('../fonts/raleway/raleway-extrabold.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/raleway/raleway-extrabold.woff2') format('woff2'),
+//          url('../fonts/raleway/raleway-extrabold.woff') format('woff'),
+//          url('../fonts/raleway/raleway-extrabold.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'ralewaymedium';
+//     src: url('../fonts/raleway/raleway-medium.eot');
+//     src: url('../fonts/raleway/raleway-medium.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/raleway/raleway-medium.woff2') format('woff2'),
+//          url('../fonts/raleway/raleway-medium.woff') format('woff'),
+//          url('../fonts/raleway/raleway-medium.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'ralewayregular';
+//     src: url('../fonts/raleway/raleway-regular.eot');
+//     src: url('../fonts/raleway/raleway-regular.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/raleway/raleway-regular.woff2') format('woff2'),
+//          url('../fonts/raleway/raleway-regular.woff') format('woff'),
+//          url('../fonts/raleway/raleway-regular.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'ralewaysemibold';
+//     src: url('../fonts/raleway/raleway-semibold.eot');
+//     src: url('../fonts/raleway/raleway-semibold.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/raleway/raleway-semibold.woff2') format('woff2'),
+//          url('../fonts/raleway/raleway-semibold.woff') format('woff'),
+//          url('../fonts/raleway/raleway-semibold.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
