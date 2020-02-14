@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'montserratlight';
+    src: url('../fonts/montserrat/montserrat-light.eot');
+    src: url('../fonts/montserrat/montserrat-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat/montserrat-light.woff2') format('woff2'),
+         url('../fonts/montserrat/montserrat-light.woff') format('woff'),
+         url('../fonts/montserrat/montserrat-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// @font-face {
+//     font-family: 'montserratultralight';
+//     src: url('../fonts/montserrat/montserrat-ultralight.eot');
+//     src: url('../fonts/montserrat/montserrat-ultralight.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/montserrat/montserrat-ultralight.woff2') format('woff2'),
+//          url('../fonts/montserrat/montserrat-ultralight.woff') format('woff'),
+//          url('../fonts/montserrat/montserrat-ultralight.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'ralewaybold';
+//     src: url('../fonts/raleway/raleway-bold.eot');
+//     src: url('../fonts/raleway/raleway-bold.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/raleway/raleway-bold.woff2') format('woff2'),
+//          url('../fonts/raleway/raleway-bold.woff') format('woff'),
+//          url('../fonts/raleway/raleway-bold.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'ralewayextrabold';
+//     src: url('../fonts/raleway/raleway-extrabold.eot');
+//     src: url('../fonts/raleway/raleway-extrabold.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/raleway/raleway-extrabold.woff2') format('woff2'),
+//          url('../fonts/raleway/raleway-extrabold.woff') format('woff'),
+//          url('../fonts/raleway/raleway-extrabold.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'ralewaymedium';
+//     src: url('../fonts/raleway/raleway-medium.eot');
+//     src: url('../fonts/raleway/raleway-medium.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/raleway/raleway-medium.woff2') format('woff2'),
+//          url('../fonts/raleway/raleway-medium.woff') format('woff'),
+//          url('../fonts/raleway/raleway-medium.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'ralewayregular';
+//     src: url('../fonts/raleway/raleway-regular.eot');
+//     src: url('../fonts/raleway/raleway-regular.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/raleway/raleway-regular.woff2') format('woff2'),
+//          url('../fonts/raleway/raleway-regular.woff') format('woff'),
+//          url('../fonts/raleway/raleway-regular.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'ralewaysemibold';
+//     src: url('../fonts/raleway/raleway-semibold.eot');
+//     src: url('../fonts/raleway/raleway-semibold.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/raleway/raleway-semibold.woff2') format('woff2'),
+//          url('../fonts/raleway/raleway-semibold.woff') format('woff'),
+//          url('../fonts/raleway/raleway-semibold.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }

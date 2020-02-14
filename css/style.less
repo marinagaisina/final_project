@@ -105,50 +105,42 @@ header {
     &_content {
         min-height: 260px;
     }
-    & form {
+
+    form {
         position: relative;
-        &:focus .search {
-            visibility: visible;
-        }
+        //z-index: 10;
     }
-    .search {
+
+    .search_input {
         position: absolute;
-        top: 30px;
-        left: 13px;
-        visibility: hidden;
-        background-color: transparent;
-        padding: 5px;
+        top: -15px;
+        left: 16px;
+        padding: 7px 30px 7px 7px;
+        box-sizing: border-box;
         width: 48px;
         border: none;
-        color: #ffffff;
+        color: #c7b299;
         font-family: 'Montserrat', sans-serif;
-        font-weight: 300;
+        font-weight: 300; 
+        background-color: transparent;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.762,22.681 L17.569,16.586 C19.190,14.825 20.187,12.494 20.187,9.929 C20.186,4.443 15.668,-0.002 10.093,-0.002 C4.519,-0.002 0.001,4.443 0.001,9.929 C0.001,15.416 4.519,19.862 10.093,19.862 C12.502,19.862 14.711,19.028 16.446,17.644 L22.663,23.763 C22.966,24.062 23.458,24.062 23.761,23.763 C24.065,23.464 24.065,22.979 23.762,22.681 ZM10.093,18.334 C5.377,18.334 1.553,14.572 1.553,9.929 C1.553,5.288 5.377,1.525 10.093,1.525 C14.810,1.525 18.633,5.288 18.633,9.929 C18.633,14.572 14.810,18.334 10.093,18.334 Z' fill-rule='nonezero' fill='white'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: 4px 3px;      
         &:hover {
-            cursor: pointer;           
+            cursor: pointer;
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.762,22.681 L17.569,16.586 C19.190,14.825 20.187,12.494 20.187,9.929 C20.186,4.443 15.668,-0.002 10.093,-0.002 C4.519,-0.002 0.001,4.443 0.001,9.929 C0.001,15.416 4.519,19.862 10.093,19.862 C12.502,19.862 14.711,19.028 16.446,17.644 L22.663,23.763 C22.966,24.062 23.458,24.062 23.761,23.763 C24.065,23.464 24.065,22.979 23.762,22.681 ZM10.093,18.334 C5.377,18.334 1.553,14.572 1.553,9.929 C1.553,5.288 5.377,1.525 10.093,1.525 C14.810,1.525 18.633,5.288 18.633,9.929 C18.633,14.572 14.810,18.334 10.093,18.334 Z' fill-rule='nonezero' fill='rgb(199, 178, 153)'/%3E%3C/svg%3E");           
         }
         &:focus {
             width: 170px;
             transition: width 0.5s ease-out;
             border: 1px solid rgb(199, 178, 153);
             outline: none;
-            border-radius: 8px; 
+            border-radius: 8px;
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.762,22.681 L17.569,16.586 C19.190,14.825 20.187,12.494 20.187,9.929 C20.186,4.443 15.668,-0.002 10.093,-0.002 C4.519,-0.002 0.001,4.443 0.001,9.929 C0.001,15.416 4.519,19.862 10.093,19.862 C12.502,19.862 14.711,19.028 16.446,17.644 L22.663,23.763 C22.966,24.062 23.458,24.062 23.761,23.763 C24.065,23.464 24.065,22.979 23.762,22.681 ZM10.093,18.334 C5.377,18.334 1.553,14.572 1.553,9.929 C1.553,5.288 5.377,1.525 10.093,1.525 C14.810,1.525 18.633,5.288 18.633,9.929 C18.633,14.572 14.810,18.334 10.093,18.334 Z' fill-rule='nonezero' fill='rgb(199, 178, 153)'/%3E%3C/svg%3E"); 
+            background-position: right;
         }
     }
-    button[type="submit"] {
-        background-color: transparent;
-        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.762,22.681 L17.569,16.586 C19.190,14.825 20.187,12.494 20.187,9.929 C20.186,4.443 15.668,-0.002 10.093,-0.002 C4.519,-0.002 0.001,4.443 0.001,9.929 C0.001,15.416 4.519,19.862 10.093,19.862 C12.502,19.862 14.711,19.028 16.446,17.644 L22.663,23.763 C22.966,24.062 23.458,24.062 23.761,23.763 C24.065,23.464 24.065,22.979 23.762,22.681 ZM10.093,18.334 C5.377,18.334 1.553,14.572 1.553,9.929 C1.553,5.288 5.377,1.525 10.093,1.525 C14.810,1.525 18.633,5.288 18.633,9.929 C18.633,14.572 14.810,18.334 10.093,18.334 Z' fill-rule='nonezero' fill='white'/%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        .dimensions(24px, 24px);
-        border: none;
-        margin: 0 0 0 15px;
-        &:hover {
-            outline: none;
-            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.762,22.681 L17.569,16.586 C19.190,14.825 20.187,12.494 20.187,9.929 C20.186,4.443 15.668,-0.002 10.093,-0.002 C4.519,-0.002 0.001,4.443 0.001,9.929 C0.001,15.416 4.519,19.862 10.093,19.862 C12.502,19.862 14.711,19.028 16.446,17.644 L22.663,23.763 C22.966,24.062 23.458,24.062 23.761,23.763 C24.065,23.464 24.065,22.979 23.762,22.681 ZM10.093,18.334 C5.377,18.334 1.553,14.572 1.553,9.929 C1.553,5.288 5.377,1.525 10.093,1.525 C14.810,1.525 18.633,5.288 18.633,9.929 C18.633,14.572 14.810,18.334 10.093,18.334 Z' fill-rule='nonezero' fill='rgb(199, 178, 153)'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-        }
-    }
-}
-
+}        
 .header_content {
     display: flex;
     .dimensions(593px, 824px);
@@ -219,8 +211,7 @@ header {
         }
         .get_started_btn {
 
-            width: 170px;
-            height: 53px;
+            .dimensions(170px,53px);
             text-decoration: none;
             color: inherit;
             box-shadow: inset 0 -3px 0 #736357;
@@ -262,6 +253,11 @@ header {
         border-radius: 50%;
         border: 2px solid transparent;
         &:hover {
+            background-color: transparent;
+            transform: scale(1.4);
+            border: 2px solid #d3c1ad;
+        }
+        &:focus {
             background-color: transparent;
             transform: scale(1.4);
             border: 2px solid #d3c1ad;
@@ -318,83 +314,273 @@ header {
         &:hover:after {
             background-color: #c7b299;;
         }
-    }        
+    }
 }
 
+.template_examples {
+    .dimensions(100%, 700px);
+    background-color: #fbfaf8;
+    &_wrp {
+        max-width: calc(@width_content - 400px);
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    &_title {
+        max-width: 100%;
+        margin: 79px auto 20px auto;
+        color: #555555;
+        font-family: "Raleway", sans-serif;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 1.15;
+    }
+    &_txt {
+        color: #8c8c8c;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 25px;
+        margin: 0 0 36px 0;
+    }
+    &_img:first-of-type {
+        .dimensions(770px, 400px);
+        position: absolute;
+        top: 300px;
+        left: -230px;
+        z-index: 1;
+        &:hover {
+            z-index: 3;
+        }
+    }
+    &_img:nth-of-type(2) {
+        .dimensions(770px, 482px);
+        z-index: 2;
+    }
+    &_img:last-of-type {
+        .dimensions(770px, 400px);
+        position: absolute;
+        top: 300px;
+        left: 230px;
+        z-index: 1;
+        &:hover {
+            z-index: 3;
+        }
+    }
+}
 
-// @font-face {
-//     font-family: 'montserratlight';
-//     src: url('../fonts/montserrat/montserrat-light.eot');
-//     src: url('../fonts/montserrat/montserrat-light.eot?#iefix') format('embedded-opentype'),
-//          url('../fonts/montserrat/montserrat-light.woff2') format('woff2'),
-//          url('../fonts/montserrat/montserrat-light.woff') format('woff'),
-//          url('../fonts/montserrat/montserrat-light.ttf') format('truetype');
-//     font-weight: normal;
-//     font-style: normal;
-// }
+.purchase {
+    .dimensions(100%, 150px);
+    background-color: #f4f5f8;
+    background-image: linear-gradient(to right, #211b19 0%, #4e3427 100%);
+    display: flex;
+    &_wrp {
+        width: @width_content;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    h2 {
+        margin: 0 0 7px 0;
+        color: #ffffff;
+        font-family: 'Raleway', sans-serif;
+        font-size: 28px;
+        font-weight: 400;
+        span:first-child {
+            color: #c7b299;
+        }
+    }
+    &_txt {
+        margin: 0;
+        color: #615855;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        text-align: start;
+    }
+    &_btn {
+        .dimensions(170px, 50px);    
+            text-decoration: none;
+            color: inherit;
+            box-shadow: inset 0 -3px 0 #736357;
+            border-radius: 3px;
+            background-color: #998675;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        &:hover {
+            background-color: #111111;
+            box-shadow: none;
+        }
+        span {
+            color: #ffffff;
+            font-family: "Raleway";
+            font-size: 14px;
+            font-weight: 800;
+            line-height: 23px;
+            text-transform: uppercase;
+        }
+        &:focus {
+            background-color: #ffffff;
+            outline: none;
+            box-shadow: none;
+            & span {
+                color: #000000;
+            }
+        }
+    }
+}
 
-// @font-face {
-//     font-family: 'montserratultralight';
-//     src: url('../fonts/montserrat/montserrat-ultralight.eot');
-//     src: url('../fonts/montserrat/montserrat-ultralight.eot?#iefix') format('embedded-opentype'),
-//          url('../fonts/montserrat/montserrat-ultralight.woff2') format('woff2'),
-//          url('../fonts/montserrat/montserrat-ultralight.woff') format('woff'),
-//          url('../fonts/montserrat/montserrat-ultralight.ttf') format('truetype');
-//     font-weight: normal;
-//     font-style: normal;
-// }
+.projects {
+    width: 100%;
+    padding: @padding_sec 0 @padding_sec 0;
+    &_title {
+    color: #555555;
+    font-family: "Raleway";
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0;
+    }
+    &_txt {
+        max-width: 770px;
+        color: #8c8c8c;
+        font-family: 'Montserrat';
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 27px;
+        margin: 24px auto 40px auto;
 
-// @font-face {
-//     font-family: 'ralewaybold';
-//     src: url('../fonts/raleway/raleway-bold.eot');
-//     src: url('../fonts/raleway/raleway-bold.eot?#iefix') format('embedded-opentype'),
-//          url('../fonts/raleway/raleway-bold.woff2') format('woff2'),
-//          url('../fonts/raleway/raleway-bold.woff') format('woff'),
-//          url('../fonts/raleway/raleway-bold.ttf') format('truetype');
-//     font-weight: normal;
-//     font-style: normal;
-// }
+    }
+    .features {
+        display: flex;
+        justify-content: center;
+        &_item {
+            .dimensions(120px, 32px);
+            border-radius: 3px;
+            border: 1px solid #ebebeb;
+            margin-right: 10px;
+            color: #8c8c8c;
+            font-family: 'Montserrat';
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 21px;
+            background-color: #ffffff;
+            &:first-child {
+                width: 70px;
+            }
+            &:last-child {
+                width: 135px;
+                margin: 0;
+            }
+            &:hover {
+                background-color: #998675;
+                color: #ffffff;
+            }
+            &:focus {
+                outline: none;
+                background-color: #111111;
+                color: #ffffff;
+            }
+        }
+    }
+    &_cards_wrp {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: @width_content;
+        margin: 40px auto 40px auto;
+    }
+    &_card {
+        margin: 0 30px 30px 0;
+        max-width: 370px;
+        position: relative;
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6) {
+            margin-bottom: 0;
+        }
+        &:nth-child(3),
+        &:nth-child(6) {
+            margin-right: 0;
+        }
+        &_img {
+            float: left;
+        }
+        &_title {
+            color: #c7b299;
+            font-family: 'Raleway';
+            font-size: 20px;
+            font-weight: 500;
+        }
+        &_txt {
+            color: #d1d1d1;
+            font-family: 'Montserrat';
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 20px;
+            margin: 13px 0 0 0;
+        }
+        &_btn_link,
+        &_btn_search {
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            display: none;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: none;
+            background-color: transparent;
+            top: 45%
+        }
+        &_btn_link {
+            background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath d='M23.499,11.242 L21.573,13.170 L18.386,16.359 C18.233,16.529 18.045,16.683 17.875,16.819 C16.102,18.217 13.750,18.524 11.722,17.724 C10.972,17.433 10.256,16.973 9.643,16.359 L12.284,13.715 C13.239,14.670 14.790,14.670 15.744,13.715 L17.772,11.686 L20.857,8.599 C21.812,7.644 21.812,6.091 20.857,5.137 C19.903,4.182 18.352,4.182 17.397,5.137 L14.943,7.593 C13.409,6.877 11.654,6.757 10.035,7.217 L14.756,2.494 C17.159,0.089 21.096,0.089 23.499,2.494 C25.919,4.915 25.919,8.837 23.499,11.242 ZM14.262,8.293 C15.011,8.582 15.727,9.042 16.341,9.656 L13.699,12.301 C12.745,11.345 11.194,11.345 10.239,12.301 L5.126,17.416 C4.171,18.372 4.171,19.922 5.126,20.878 C6.080,21.834 7.631,21.834 8.586,20.878 L10.938,18.524 C12.949,19.327 13.495,19.394 15.846,18.849 L11.228,23.521 C8.825,25.927 4.887,25.927 2.484,23.521 C0.081,21.117 0.081,17.178 2.484,14.774 L7.597,9.656 C7.665,9.589 7.751,9.503 7.836,9.435 C9.625,7.831 12.131,7.439 14.262,8.293 Z' fill-rule='nonezero' fill='rgb(199, 178, 153)'/%3E%3C/svg%3E");
+            left: 35%;
+        }
+        &_btn_search {
+            right: 15%;
+            background-image: url("data:image/svg+xml,%3Csvg width='26' height='25' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath d='M25.456,24.172 C25.135,24.489 24.714,24.646 24.293,24.646 C23.873,24.646 23.451,24.489 23.130,24.172 L18.795,19.901 C16.902,21.348 14.535,22.218 11.959,22.218 C5.793,22.218 0.777,17.276 0.777,11.202 C0.777,5.128 5.793,0.186 11.959,0.186 C18.125,0.186 23.141,5.128 23.141,11.202 C23.141,13.572 22.370,15.764 21.073,17.563 L25.456,21.881 C26.098,22.514 26.098,23.540 25.456,24.172 ZM11.960,2.778 C7.245,2.778 3.409,6.557 3.409,11.202 C3.409,15.847 7.245,19.626 11.960,19.627 C14.064,19.627 15.990,18.871 17.481,17.624 C17.941,17.240 18.355,16.805 18.724,16.336 C19.840,14.913 20.510,13.135 20.510,11.202 C20.510,6.557 16.674,2.778 11.960,2.778 ZM16.810,9.581 C16.625,9.668 16.429,9.711 16.234,9.711 C15.747,9.711 15.280,9.444 15.052,8.983 C14.347,7.559 12.911,6.674 11.304,6.674 C10.578,6.674 9.989,6.094 9.989,5.377 C9.989,4.663 10.578,4.082 11.304,4.082 C13.925,4.082 16.268,5.525 17.417,7.847 C17.735,8.491 17.464,9.267 16.810,9.581 Z' fill-rule='nonezero' fill='rgb(255, 255, 255)'/%3E%3C/svg%3E");
 
-// @font-face {
-//     font-family: 'ralewayextrabold';
-//     src: url('../fonts/raleway/raleway-extrabold.eot');
-//     src: url('../fonts/raleway/raleway-extrabold.eot?#iefix') format('embedded-opentype'),
-//          url('../fonts/raleway/raleway-extrabold.woff2') format('woff2'),
-//          url('../fonts/raleway/raleway-extrabold.woff') format('woff'),
-//          url('../fonts/raleway/raleway-extrabold.ttf') format('truetype');
-//     font-weight: normal;
-//     font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'ralewaymedium';
-//     src: url('../fonts/raleway/raleway-medium.eot');
-//     src: url('../fonts/raleway/raleway-medium.eot?#iefix') format('embedded-opentype'),
-//          url('../fonts/raleway/raleway-medium.woff2') format('woff2'),
-//          url('../fonts/raleway/raleway-medium.woff') format('woff'),
-//          url('../fonts/raleway/raleway-medium.ttf') format('truetype');
-//     font-weight: normal;
-//     font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'ralewayregular';
-//     src: url('../fonts/raleway/raleway-regular.eot');
-//     src: url('../fonts/raleway/raleway-regular.eot?#iefix') format('embedded-opentype'),
-//          url('../fonts/raleway/raleway-regular.woff2') format('woff2'),
-//          url('../fonts/raleway/raleway-regular.woff') format('woff'),
-//          url('../fonts/raleway/raleway-regular.ttf') format('truetype');
-//     font-weight: normal;
-//     font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'ralewaysemibold';
-//     src: url('../fonts/raleway/raleway-semibold.eot');
-//     src: url('../fonts/raleway/raleway-semibold.eot?#iefix') format('embedded-opentype'),
-//          url('../fonts/raleway/raleway-semibold.woff2') format('woff2'),
-//          url('../fonts/raleway/raleway-semibold.woff') format('woff'),
-//          url('../fonts/raleway/raleway-semibold.ttf') format('truetype');
-//     font-weight: normal;
-//     font-style: normal;
-// }
+        }
+        &:hover .projects_card_btn_link {
+            display: block;
+        }
+        &:hover .projects_card_btn_search {
+            display: block;
+        }
+        &:hover .projects_card_img {
+            filter: brightness(30%);
+        }
+        &:hover .projects_txt_wrp {
+            background-color: #362f2d;;
+        }
+        &:hover .projects_txt_wrp::before {
+            border-bottom: 10px solid #362f2d;
+        }
+        &:hover .projects_card_title {
+            color: #ffffff;
+        }
+        &:hover .projects_card_txt {
+            color: #c7b299;
+        }
+    }
+    &_txt_wrp {
+        display: flex;
+        flex-direction: column;
+        min-height: 100px;
+        background-color: #fbfaf8;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 0 0 28px;
+        &:before {
+            content: "";
+            border: 10px solid transparent;	
+            border-bottom: 10px solid #fbfaf8;
+            position: absolute;
+            top: 217px;
+            left: 19px;
+        }
+    }
+}
